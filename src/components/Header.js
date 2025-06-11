@@ -1,21 +1,18 @@
-import {Navbar,NavbarBrand,Nav,
-    NavLink,Form,FormControl,Button
-} from 'react-bootstrap';
-const Header=()=>{
-   return (
-    <Navbar bg='primary' variant='dark'>
-       <NavbarBrand href='#home'>NavBar</NavbarBrand>
-       <Nav className='mr-auto'>
-        <NavLink href='#home'>Home</NavLink>
-        <NavLink href='#features'>Features</NavLink>
-        <NavLink href='#pricing'>Pricing</NavLink>
-       </Nav>
-       <Form className='d-flex'>
-           <FormControl type='text' placeholder='Search'
-            className='mr-sm-2' />
-            <Button variant='outline-light'>Search</Button>
-       </Form>
-    </Navbar>
-   );
+import {Navbar, Form, FormControl, Button
+} from 'react-bootstrap'
+import Menu from './Menu'
+const Header = () => {
+    return (
+        <Navbar bg="primary" variant="dark" className='d-flex' >
+            <img style={{ height: 50, width: 120 }}
+                src="/logo512.png" />
+            <Menu />
+            <Form className='d-flex' >
+                <FormControl type="text" placeholder="Search"
+                    className="mr-sm-2" />
+                <Button variant="outline-light">Search</Button>
+            </Form>
+        </Navbar>
+    );
 }
 export default Header;
